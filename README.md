@@ -7,8 +7,11 @@
  3. > npm install 
  4. Start the server using either 
     > npm start
+    
     or
+    
     > node app.js 3000
+    
     where 3000 can be any of your desired port 
  5. Access the game through your browser at
     > localhost:3000
