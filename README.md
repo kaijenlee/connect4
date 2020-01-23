@@ -17,6 +17,7 @@
     where 3000 can be any of your desired port 
  5. Access the game through your browser at
     > localhost:3000
+    
     where 3000 is your desired port, 3000 is set as the default port for "npm start"
  ---
  Tested in latest versions of:
