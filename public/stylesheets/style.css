@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+
+@media (min-width: 600px) and (min-height: 600px){
+  body {
+    background-image: url("https://live.staticflickr.com/7369/10612801824_cb5a600be7_b.jpg");
+    background-color: #cccccc;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+html,
+body,
+main,
+section {
+  max-height: 768px;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+

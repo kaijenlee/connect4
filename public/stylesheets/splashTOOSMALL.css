@@ -1,0 +1,11 @@
+@import"style.css";
+
+button {
+    visibility: hidden;
+}
+
+h2:after {
+    content: "\A\A ERROR: The resolution of your viewport is not sufficient for this app to function properly \A Please use a different device.";
+    white-space: pre-wrap;
+    color: darkred;
+}

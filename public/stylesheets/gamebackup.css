@@ -1,0 +1,120 @@
+
+@import "style.css";
+
+
+#game{
+    min-width: 420px;
+}
+
+.column {
+    float: left;
+    height :350px;
+    width: 60px;
+    background-image: linear-gradient(blue, darkblue);
+}
+
+.row {
+    float: left;
+    height: 50px;
+    width: 60px;
+    background-color: transparent;
+}
+.row::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 5px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: white;
+}
+.rowP1 {
+    float: left;
+    height: 50px;
+    width: 60px;
+    background-color: transparent;
+}
+.rowP1::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 5px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: yellow;
+    animation-name: changeToP1;
+    animation-duration: 2s;
+}
+
+.rowP2 {
+    float: left;
+    height: 50px;
+    width: 60px;
+    background-color: transparent;
+}
+.rowP2::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 5px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: red;
+    animation-name: changeToP2;
+    animation-duration: 2s;
+}
+
+/* do i need to float pointers? */
+.pointerOn{
+    width: 60px; 
+    height: 40px; 
+
+}
+
+.pointerOn::after{
+    content: "";
+    position: relative;
+    top: 35px;
+    left: 10px;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid transparent;
+    animation-name: pointerGlow;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+    /* border-top: 20px solid yellow; */
+}
+
+.pointer{
+    /* float: left; */
+    width: 60px; 
+    height: 40px; 
+    background-color: transparent;
+
+}
+
+@keyframes pointerGlow{
+    0% {border-top: 20px solid yellow;}
+    49% {border-top: 20px solid yellow;}
+    50% {border-top: 20px solid gold;}
+    99% {border-top: 20px solid gold;}
+    100% {border-top: 20px solid yellow;}
+}
+
+@keyframes changeToP1{
+    from {background-color: white;}
+    to {background-color: yellow;}
+}
+
+@keyframes changeToP2{
+    from {background-color: white;}
+    to {background-color: red;}
+}

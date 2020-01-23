@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Konek IV: Multiplayer Connect 4</title>
+    <link rel= "stylesheet" media = "(min-width: 601px) and (min-height: 750px)" href = "stylesheets/splash.css"/>
+    <link rel= "stylesheet" media = "(max-width: 600px) , (max-height: 749px)" href = "stylesheets/splashTOOSMALL.css"/>
+</head>
+<body>
+    <main>
+        <h1>Konek IV</h1>
+        <h2>Multiplayer Connect 4</h2>
+        <section id="middle">
+            <div id= "decoration-middle">
+                <span id = "token1" class="token"></span>
+                &nbsp;
+                <span id = "token2" class="token"></span>
+                &nbsp;
+                <span id = "token3" class="token"></span>
+                &nbsp;
+                <span id = "token4" class="token"></span>
+                &nbsp;
+            </div>
+        </section>
+        &nbsp;
+        <section id = "main">
+            <form action="/play" method = "get">
+                <button type="submit">Play</button>
+            </form>
+            <br>
+            <form action="/rules" method = "get">
+                <button type="submit">Rules</button>
+            </form>
+        </section>
+        <!-- <h3><%= gamesInitialized %> 
+            <%if (gamesInitialized != 1) { %>
+                games
+            <% } else { %>
+                game
+            <% } %>
+            initialized, 
+            <%= gamesCompleted %> 
+            completed, 
+            <%= gamesAborted %>
+            aborted since
+            <%= sinceDate %> 
+        </h3> -->
+        <div id="numGamesPlayed"></div>
+        <script src="javascripts/splash.js"></script>
+        
+    </main>
+    
+</body>
+</html>

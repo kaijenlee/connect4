@@ -1,0 +1,15 @@
+#game {
+    visibility: hidden;
+}
+
+h2 {
+    visibility: visible;
+    text-align: center;
+}
+
+h2:after {
+    content: "\A\A ERROR: The resolution of your viewport is not sufficient for this app to function properly \A Please use a different device.";
+    white-space: pre-wrap;
+    color: darkred;
+    font-size: 100%;
+}

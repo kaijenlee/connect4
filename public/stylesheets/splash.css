@@ -1,0 +1,160 @@
+@import"style.css";
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+#decoration-middle {
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    left: 1.5%;
+    height: 50px;
+    width: 240px;
+    padding: 0;
+
+}
+
+h1 {
+    font-size: 400%;
+}
+
+@keyframes floatingToken{
+    
+    0% {top:-32px}
+    25% {top:-27px}
+    75% {top:-37px}
+    100% {top:-32px}
+}
+
+@keyframes floatingToken2{
+    0% {top: 5px}
+    25% {top: 10px}
+    75% {top:  0px}
+    100% {top: 5px}
+}
+
+.token:before {
+    float: left;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 5px;
+    left: 0;
+    background-color: gold;
+    border-radius: 50px;
+    border: black;
+    border-style: dotted;
+    
+
+}
+
+.token {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.token:after {
+    float:left;
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top:  -32px;
+    left: 5px;
+    background-color: gold;
+    border-radius: 40px;
+    border: black;
+    border-style: dotted;
+}
+    
+#token1:after{
+    animation-name: floatingToken;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#token1:before{
+    animation-name: floatingToken2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#token2:after{
+    animation-name: floatingToken;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+}
+#token2:before{
+    animation-name: floatingToken2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+}
+
+#token3:after{
+    animation-name: floatingToken;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+#token3:before{
+    animation-name: floatingToken2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+
+#token4:after{
+    animation-name: floatingToken;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+}
+#token4:before{
+    animation-name: floatingToken2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+}
+
+
+.token:hover:before, .token:hover:after{
+    background-color: red;
+    transition: background-color 2s ease;
+}
+
+button{
+    background-color: yellow;
+    color: darkblue;
+    font-size: 100%;
+    border :none;
+    padding: 10px;
+    width: 20%;
+    z-index: 1;
+
+}
+
+button:hover {
+    background-color: darkred;
+    color: white;
+    transition: background-color 1s ease;
+    
+
+    
+  }

@@ -1,0 +1,252 @@
+
+@import "style.css";
+
+
+
+/* html, body {
+    height: 100%;
+    width: 100%;
+} */
+
+
+body:fullscreen {
+    background-color: black;
+}
+
+#game{
+
+    width: 700px;
+    margin: 0 auto;
+
+}
+
+.column {
+    float: left;
+    vertical-align: centre;
+    margin: 0 auto;
+    height :650px;
+    width: 100px;
+    
+    background-image: linear-gradient(blue, darkblue);
+}
+  
+
+
+.fullcolumn {
+    float: left;
+    vertical-align: centre;
+    margin: 0 auto;
+    height :650px;
+    width: 100px;
+    background-image: linear-gradient(blue, darkblue);
+}
+
+
+
+.row {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
+.row::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background-color: white;
+}
+.rowplayer1 {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
+.rowplayer1::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background-color: yellow;
+    animation-name: changeToP1;
+    animation-duration: 2s;
+}
+
+.rowplayer2 {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
+.rowplayer2::after {
+    content: "";
+    float: left;
+    position: relative;
+    top : 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+    background-color: red;
+    animation-name: changeToP2;
+    animation-duration: 2s;
+}
+
+/* do i need to float pointers? */
+
+
+.pointer{
+    width: 100px; 
+    height: 50px;
+    background-color: transparent; 
+
+}
+
+.pointer:after{
+    visibility: hidden;
+    content: "";
+    position: relative;
+    top: 40px;
+    left: 23px;
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 10px solid transparent;
+    animation-name: pointerGlow;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+    /* border-top: 20px solid yellow; */
+}
+
+.pointerFull{
+    width: 100px; 
+    height: 50px;
+    background-color: transparent; 
+
+}
+
+.pointerFull:after{
+    visibility: hidden;
+    content: "";
+    position: relative;
+    top: 40px;
+    left: 23px;
+    width: 0; 
+    height: 0; 
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 10px solid transparent;
+    animation-name: pointerFullGlow;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+    /* border-top: 20px solid yellow; */
+}
+
+.column:hover .pointer:after{
+    visibility: visible;
+}
+
+.fullcolumn:hover .pointerFull:after{
+    visibility: visible;
+}
+
+
+
+@keyframes pointerGlow{
+    0% {border-top: 20px solid yellow;}
+    49% {border-top: 20px solid yellow;}
+    50% {border-top: 20px solid gold;}
+    99% {border-top: 20px solid gold;}
+    100% {border-top: 20px solid yellow;}
+}
+
+@keyframes pointerFullGlow{
+    0% {border-top: 20px solid red;}
+    49% {border-top: 20px solid red;}
+    50% {border-top: 20px solid darkred;}
+    99% {border-top: 20px solid darkred;}
+    100% {border-top: 20px solid red;}
+}
+
+@keyframes changeToP1{
+    from {background-color: white;}
+    to {background-color: yellow;}
+}
+
+@keyframes changeToP2{
+    from {background-color: white;}
+    to {background-color: red;}
+}
+
+#status {
+  float: left;
+  width: 100%;
+  height: 10%;
+  background-color: #222;
+  font-family: monaco, Bitstream Vera Sans Mono, monospace;
+  color: red;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+#statusbar {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: normal;
+  /* animation: typing 5s steps(40, end); */
+  letter-spacing: 0.1em;
+}
+
+#statusbar::after {
+  content: " _";
+  animation: blinking 0.9s steps(3, start) infinite;
+}
+
+@keyframes blinking {
+  to {
+    visibility: hidden;
+  }
+}
+
+#fullscreenButton {
+    float:right;
+    position: relative;
+    top: 200px;
+    background-image: linear-gradient(purple, violet);
+}
+
+#fullscreenButton:hover {
+    background-image: linear-gradient(red ,orange);
+}
+
+#timer {
+    float:right;
+    position: relative;
+    top: -300px;
+    left: -50px;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-family: 'Gloria Hallelujah', cursive;
+    height: 200px;
+    width: 200px;
+    background-image: linear-gradient(orange, yellow);
+}
+
+#theTimer {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 50px;
+}
