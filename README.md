@@ -4,7 +4,9 @@
 # Instructions 
  1. Download the repo and extract to a directory 
  2. On cmd, cd to that directory
- 3. > npm install 
+ 3. Install required node modules (listed in package.JSON) using 
+   
+    > npm install 
  4. Start the server using either 
     > npm start
     
