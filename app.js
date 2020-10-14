@@ -8,7 +8,7 @@ var messages = require("./public/javascripts/messages");
 var gameStatus = require("./stattracker");
 var Game = require("./game");
 
-var port = process.argv[2];
+var port = process.env.PORT || process.argv[2];
 var app = express();
 
 // app.set("view engine", "ejs");
